@@ -9,13 +9,13 @@ func Append(left, right error) (err error) {
 		return right
 	}
 	var err1 Error
-	if l1, ok := left.(Error); ok {
-		err1 = append(err1, l1...)
+	if l, ok := left.(Error); ok {
+		err1 = append(err1, l...)
 	} else {
 		err1 = append(err1, left)
 	}
-	if l1, ok := right.(Error); ok {
-		err1 = append(err1, l1...)
+	if r, ok := right.(Error); ok {
+		err1 = append(err1, r...)
 	} else {
 		err1 = append(err1, right)
 	}
