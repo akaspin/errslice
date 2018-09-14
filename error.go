@@ -11,6 +11,6 @@ func (e Error) Error() (res string) {
 		}
 		res += e1.Error()
 	}
-	return
+	return res
 }
 
