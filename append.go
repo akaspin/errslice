@@ -25,5 +25,3 @@ func Append(left, right error) (err error) {
 	}
 	return err1
 }
-
-

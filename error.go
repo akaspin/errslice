@@ -13,4 +13,3 @@ func (e Error) Error() (res string) {
 	}
 	return res
 }
-

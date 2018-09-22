@@ -55,4 +55,3 @@ func TestAppend(t *testing.T) {
 		assert.EqualError(t, err, "1,2")
 	})
 }
-
