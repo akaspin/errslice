@@ -9,8 +9,9 @@ import (
 
 func TestError_Error(t *testing.T) {
 	t.Run("nil", func(t *testing.T) {
-		var err errslice.Error
-		assert.Empty(t, err.Error())
+		var err error
+		err = errslice.Append(err, nil)
+		assert.Nil(t, err)
 	})
 	t.Run("error", func(t *testing.T) {
 		err := errslice.Append(errors.New("1"), errors.New("2"))
