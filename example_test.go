@@ -2,6 +2,7 @@ package errslice_test
 
 import (
 	"fmt"
+
 	"github.com/akaspin/errslice"
 )
 

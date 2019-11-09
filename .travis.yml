@@ -1,7 +1,9 @@
 language: go
 
 go:
-- "1.11"
+- "1.11.6"
+- "1.12"
+- "1.13"
 
 cache:
   directories:
@@ -9,7 +11,5 @@ cache:
   - /home/travis/gopath/bin
 
 script:
-- make coverage lint
+- make lint race-nocache
 
-after_success:
-- bash <(curl -s https://codecov.io/bash)
